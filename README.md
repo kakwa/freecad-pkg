@@ -1,9 +1,9 @@
-[![Build Packages Repositories](https://github.com/kakwa/misc-pkg/actions/workflows/repos.yml/badge.svg)](https://github.com/kakwa/misc-pkg/actions/workflows/repos.yml)
-[![NVD CVEs check](https://github.com/kakwa/misc-pkg/actions/workflows/vulncheck.yml/badge.svg)](https://github.com/kakwa/misc-pkg/actions/workflows/vulncheck.yml)
+[![Build Packages Repositories](https://github.com/kakwa/freecad-pkg/actions/workflows/repos.yml/badge.svg)](https://github.com/kakwa/freecad-pkg/actions/workflows/repos.yml)
+[![NVD CVEs check](https://github.com/kakwa/freecad-pkg/actions/workflows/vulncheck.yml/badge.svg)](https://github.com/kakwa/freecad-pkg/actions/workflows/vulncheck.yml)
 
-# misc-pkg
+# freecad-pkg
 
-The `.deb`/`.rpm` repositories are available at the following url: https://kakwa.github.io/misc-pkg/
+The `.deb`/`.rpm` repositories are available at the following url: https://kakwa.github.io/freecad-pkg/
 
 ## Ubuntu/Debian
 
@@ -19,13 +19,13 @@ export SUDO=sudo
 ARCH=$(dpkg --print-architecture)
 
 # Add the GPG key
-wget -qO - https://kakwa.github.io/misc-pkg/GPG-KEY.pub | \
-    gpg --dearmor | ${SUDO} tee /etc/apt/trusted.gpg.d/misc-pkg.gpg >/dev/null
+wget -qO - https://kakwa.github.io/freecad-pkg/GPG-KEY.pub | \
+    gpg --dearmor | ${SUDO} tee /etc/apt/trusted.gpg.d/freecad-pkg.gpg >/dev/null
 
 # Add the repository
 echo "deb [arch=${ARCH}] \
-https://kakwa.github.io/misc-pkg/deb.${VERSION_CODENAME}.${ARCH}/ \
-${VERSION_CODENAME} main" | ${SUDO} tee /etc/apt/sources.list.d/misc-pkg.list
+https://kakwa.github.io/freecad-pkg/deb.${VERSION_CODENAME}.${ARCH}/ \
+${VERSION_CODENAME} main" | ${SUDO} tee /etc/apt/sources.list.d/freecad-pkg.list
 
 # update
 apt update
