@@ -2,8 +2,8 @@
 NAME = coin3
 
 # Version
-VERSION=4.0.4.1
-COMMIT=d5a0bc570214cecf9a21a8ae9c5183b3216a195f
+VERSION=4.0.6.1
+COMMIT=a33214c5f7dfff1dbc4822fb6866f44bc6f881a1
 
 # Revision number 
 RELEASE = 1
@@ -51,10 +51,6 @@ include buildenv/Makefile.common
 
 # mock target that actually does nothing, remove it please
 $(SOURCE_ARCHIVE): $(SOURCE_DIR) $(CACHE) Makefile MANIFEST
-	$(WGS) -u $(URL_SRC) -o $(BUILD_DIR)/$(NAME)-$(VERSION).tar.gz
-	mkdir -p $(BUILD_DIR)/tmp
-	tar -vxf $(BUILD_DIR)/$(NAME)-$(VERSION).tar.gz -C $(BUILD_DIR)/tmp
-	mv $(BUILD_DIR)/tmp/coin-$(COMMIT)/* $(SOURCE_DIR)
-	rm -rf $(BUILD_DIR)/tmp
-	rm -f $(BUILD_DIR)/$(NAME)-$(VERSION).tar.gz
+	@$(WGS) -u $(URL_SRC) -O $(NAME)-$(VERSION).tar.gz
+	@tar -vxf $(CACHE_DIR)/$(NAME)-$(VERSION).tar.gz -C $(SOURCE_DIR) --strip-components=1
 	$(SOURCE_TAR_CMD)
