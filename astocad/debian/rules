@@ -3,6 +3,12 @@
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 DPKG_EXPORT_BUILDFLAGS = 1
 include /usr/share/dpkg/buildflags.mk
+# Strip debug and debug-prefix-map flags
+CFLAGS := $(filter-out -g -g% -ggdb%,$(CFLAGS))
+CXXFLAGS := $(filter-out -g -g% -ggdb%,$(CXXFLAGS))
+# Remove debug-prefix-map which causes linker issues
+CFLAGS := $(shell echo '$(CFLAGS)' | sed 's/-fdebug-prefix-map=[^ ]*//g')
+CXXFLAGS := $(shell echo '$(CXXFLAGS)' | sed 's/-fdebug-prefix-map=[^ ]*//g')
 CFLAGS+=$(CPPFLAGS)
 CXXFLAGS+=$(CPPFLAGS)
 
@@ -30,6 +36,8 @@ extra_flags += \
 -DBUILD_TEST=OFF \
 -DLIB_SUFFIX="" \
 -DCMAKE_BUILD_TYPE=Release \
+-DCMAKE_CXX_FLAGS_RELEASE="-O2 -DNDEBUG" \
+-DCMAKE_C_FLAGS_RELEASE="-O2 -DNDEBUG" \
 -DCMAKE_INSTALL_DATADIR="/usr/share/freecad" \
 -DCMAKE_INSTALL_DOCDIR="/usr/share/doc/freecad-doc" \
 -DCMAKE_INSTALL_PREFIX="/usr/share/freecad" \
@@ -43,7 +51,7 @@ py3_flags = \
 
 
 %:
-	dh $@ --with python3 --max-parallel=2
+	dh $@ --with python3 --max-parallel=8
 
 override_dh_auto_configure:
 	dh_auto_configure -- \
