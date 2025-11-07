@@ -2,7 +2,7 @@
 NAME=astocad
 
 # Weekly version from https://github.com/FreeCAD/FreeCAD/tags
-VERSION=2025.10.22
+VERSION=2025.11.05
 
 # Projects & Assets revision to recover
 #URL=https://github.com/AstoCAD/FreeCAD/tree/AstoCAD
