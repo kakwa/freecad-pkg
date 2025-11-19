@@ -20,16 +20,26 @@ ARCH=$(dpkg --print-architecture)
 
 # Add the GPG key
 wget -qO - https://kakwa.github.io/freecad-pkg/GPG-KEY.pub | \
-    gpg --dearmor | ${SUDO} tee /etc/apt/trusted.gpg.d/freecad-pkg.gpg >/dev/null
+    ${SUDO} tee /etc/apt/keyrings/freecad-pkg.asc >/dev/null
 
 # Add the repository
-echo "deb [arch=${ARCH}] \
-https://kakwa.github.io/freecad-pkg/deb.${VERSION_CODENAME}.${ARCH}/ \
-${VERSION_CODENAME} main" | ${SUDO} tee /etc/apt/sources.list.d/freecad-pkg.list
+cat << EOF | ${SUDO} tee /etc/apt/sources.list.d/freecad-pkg.sources
+Architectures: ${ARCH}
+Components: main
+X-Repolib-Name: freecad-pkg
+Signed-By: /etc/apt/keyrings/freecad-pkg.asc
+Suites: ${VERSION_CODENAME}
+Types: deb
+URIs: https://kakwa.github.io/freecad-pkg/deb.${VERSION_CODENAME}.${ARCH}/
+EOF
 
 # update
 apt update
+
+# install
+apt install astocad
 ```
+
 ## Build
 
 This project uses [Pakste](https://github.com/kakwa/pakste).
