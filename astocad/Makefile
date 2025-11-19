@@ -2,13 +2,13 @@
 NAME=astocad
 
 # Weekly version from https://github.com/FreeCAD/FreeCAD/tags
-VERSION=2025.11.05
+VERSION=2025.11.19
 
 # Projects & Assets revision to recover
-#URL=https://github.com/AstoCAD/FreeCAD/tree/AstoCAD
-#COMMIT=af21562b62145a75e6b4c1aee966ba967ff0c103
+URL=https://github.com/AstoCAD/FreeCAD/tree/AstoCAD
+COMMIT=9e662f82e39b619d626ac736ca42aa08d224e2a3
 
-URL=https://github.com/FreeCAD/FreeCAD
+#URL=https://github.com/FreeCAD/FreeCAD
 #COMMIT=3a8de56ee5cfda0c568f065c208cd888c6f9b05d
 
 URL_BRANDING=https://github.com/AstoCAD/astocad-feedstock
