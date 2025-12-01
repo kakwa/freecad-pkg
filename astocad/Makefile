@@ -2,17 +2,17 @@
 NAME=astocad
 
 # Weekly version from https://github.com/FreeCAD/FreeCAD/tags
-VERSION=2025.11.19
+VERSION=2025.12.01
 
 # Projects & Assets revision to recover
 URL=https://github.com/AstoCAD/FreeCAD/tree/AstoCAD
-COMMIT=9e662f82e39b619d626ac736ca42aa08d224e2a3
+COMMIT=5be48a3025a83e605c6bda761b7d35dd92a853c1
 
 #URL=https://github.com/FreeCAD/FreeCAD
 #COMMIT=3a8de56ee5cfda0c568f065c208cd888c6f9b05d
 
 URL_BRANDING=https://github.com/AstoCAD/astocad-feedstock
-COMMIT_BRANDING=a705841fe792dafca4af36a0bda075ee7de396c2
+COMMIT_BRANDING=5878a8f1f820130eb7ea276627459a7e003cdac5
 
 URL_ADDONMANAGER=https://github.com/FreeCAD/AddonManager
 COMMIT_ADDONMANAGER=65186b4a61e0cababa7c82e8bd161c1931608fa2
@@ -57,8 +57,8 @@ SKIP=<=:deb:8 >=:el:0 >=:fc:0 <=:ubu:18.4
 ########
 
 # example of source recovery url
-#URL_SRC=https://github.com/AstoCAD/FreeCAD/archive/$(COMMIT).tar.gz
-URL_SRC=https://github.com/FreeCAD/FreeCAD/archive/refs/tags/weekly-$(VERSION).tar.gz
+URL_SRC=https://github.com/AstoCAD/FreeCAD/archive/$(COMMIT).tar.gz
+#URL_SRC=https://github.com/FreeCAD/FreeCAD/archive/refs/tags/weekly-$(VERSION).tar.gz
 
 BRANDING_URL_SRC=$(URL_BRANDING)/archive/$(COMMIT_BRANDING).tar.gz
 
