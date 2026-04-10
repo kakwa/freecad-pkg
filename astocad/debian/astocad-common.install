@@ -9,4 +9,6 @@ usr/lib/freecad/bin/branding.xml
 usr/lib/freecad/share/Gui/AstoCAD/*
 usr/share/freecad/share/pixmaps/freecad.svg
 usr/share/icons/hicolor/scalable/apps/AstoCAD.svg
+usr/share/freecad/share/pkgconfig/*
+usr/lib/freecad-python3/lib/cmake/*
 data/examples usr/share/freecad/examples
