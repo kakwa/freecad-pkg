@@ -22,6 +22,11 @@ else
   build_web := Off
 endif
 
+py3ver = $(shell py3versions -d -v | tr -d .)
+ifeq (1,$(shell expr ${py3ver} \< 38 ))
+    py3ver := $(py3ver)m
+endif
+
 extra_flags += \
 -DBUILD_QT5=ON \
 -DBUILD_FLAT_MESH=ON \
@@ -36,7 +41,7 @@ extra_flags += \
 -DCMAKE_INSTALL_DATADIR="/usr/share/freecad" \
 -DCMAKE_INSTALL_DOCDIR="/usr/share/doc/freecad-doc" \
 -DCMAKE_INSTALL_PREFIX="/usr/share/freecad" \
--DPYTHON_CONFIG_SUFFIX=".abi3" \
+-DPYTHON_CONFIG_SUFFIX=".cpython-$(py3ver)-$(DEB_HOST_MULTIARCH)" \
 -DBUILD_WEB="$(build_web)" \
 -DBUILD_ASSEMBLY="ON"
 
