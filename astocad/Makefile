@@ -21,7 +21,7 @@ URL_ONDSELSOLVER=https://github.com/FreeCAD/OndselSolver
 COMMIT_ONDSELSOLVER=9e8a88547e1ee7db534df1921dd694aa3b690d04
 
 # Revision number 
-RELEASE=1
+RELEASE=2
 
 # short summary of what the package provides
 SUMMARY=AstoCAD, an opensource multiplatform 3D parametric modeler based on FreeCAD. 
