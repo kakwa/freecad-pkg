@@ -2,10 +2,10 @@
 NAME = coin3
 
 # Version
-VERSION=4.0.8.1
-COMMIT=850deb323abca942418418c124fabfea8678333d
+VERSION=4.0.10.1
+COMMIT=456aefc8340d947994ee95c0187087b83eff58e4
 
-# Revision number 
+# Revision number
 RELEASE = 1
 
 # URL of the project 

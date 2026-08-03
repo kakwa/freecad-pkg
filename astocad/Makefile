@@ -2,26 +2,26 @@
 NAME=astocad
 
 # Weekly version from https://github.com/FreeCAD/FreeCAD/tags
-VERSION=2026.04.09
+VERSION=2026.07.29
 
 # Projects & Assets revision to recover
 URL=https://github.com/AstoCAD/FreeCAD/tree/AstoCAD
-COMMIT=0730e2a4b7c012c82616e359155165652335d33b
+COMMIT=ac797005d1076abbfdabf76133eccf9eee5d79b2
 
 #URL=https://github.com/FreeCAD/FreeCAD
 #COMMIT=3a8de56ee5cfda0c568f065c208cd888c6f9b05d
 
 URL_BRANDING=https://github.com/AstoCAD/astocad-feedstock
-COMMIT_BRANDING=54203b377829a0b9788bc69aea2ace5abf5731dc
+COMMIT_BRANDING=dc4083e3ccd3511d5eb7d11974cd0c1c9a80ade0
 
 URL_ADDONMANAGER=https://github.com/FreeCAD/AddonManager
-COMMIT_ADDONMANAGER=291366f293c8b1c073e7b1f300e04e38dc40c7fe
+COMMIT_ADDONMANAGER=6aeea2d01d36c026ef969a6e6d4d652386eccac3
 
 URL_ONDSELSOLVER=https://github.com/FreeCAD/OndselSolver
-COMMIT_ONDSELSOLVER=9e8a88547e1ee7db534df1921dd694aa3b690d04
+COMMIT_ONDSELSOLVER=3afcb30353084d402e3c34760cd662cf22d88759
 
-# Revision number 
-RELEASE=2
+# Revision number
+RELEASE=1
 
 # short summary of what the package provides
 SUMMARY=AstoCAD, an opensource multiplatform 3D parametric modeler based on FreeCAD. 
