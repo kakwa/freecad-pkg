@@ -18,7 +18,7 @@ Build-Depends: do-not-build-on-these-archs [i386 armel],
                libboost-regex-dev,
                libboost-serialization-dev,
                libboost-thread-dev,
-               libcoin-dev (>= 4.0.10),
+               libcoin-dev (>= 4.0.9),
                libcups2-dev,
                libdouble-conversion-dev,
                libpcl-dev,
@@ -123,7 +123,7 @@ Package: astocad-python3
 Conflicts: freecad-python3
 Architecture: any
 Depends: astocad-common (= ${source:Version}),
-         libcoin80t64 (>= 4.0.10),
+         libcoin80t64 (>= 4.0.9),
          pyside6-tools,
          libcups2t64,
          libpcl-surface1.15,
