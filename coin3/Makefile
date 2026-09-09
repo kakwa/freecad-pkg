@@ -2,8 +2,7 @@
 NAME = coin3
 
 # Version
-VERSION=4.0.10.1
-COMMIT=456aefc8340d947994ee95c0187087b83eff58e4
+VERSION=4.0.10
 
 # Revision number
 RELEASE = 1
@@ -28,6 +27,7 @@ LICENSE=BSD
 #   <dist>:    the distribution code name (examples: 'deb', 'el', 'fc')
 #   <version>: the version number to ignore
 #
+#SKIP=>=:deb:0 >=:el:0 >=:fc:0 >=:ubu:0
 SKIP=<=:deb:8 >=:el:0 >=:fc:0 <=:ubu:18.4
 
 ###############################################################################
@@ -35,7 +35,7 @@ SKIP=<=:deb:8 >=:el:0 >=:fc:0 <=:ubu:18.4
 ########
 
 # example of source recovery url
-URL_SRC=https://github.com/coin3d/coin/archive/$(COMMIT).tar.gz
+URL_SRC=https://github.com/coin3d/coin/archive/v$(VERSION).tar.gz
 
 # Including common rules and targets 
 include buildenv/Makefile.common
